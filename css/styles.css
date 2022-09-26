@@ -199,6 +199,9 @@ nav.flex-container {
     align-items: center;
 }
 
+.nav-link:hover{
+    transition: color var(--time-duration) var(--cubic-bezier);
+}
 
 /*КОНТАКТИ*/
 .contacts-header .link {
@@ -242,7 +245,10 @@ nav.flex-container {
 .nav-contacts:hover,
 .nav-contacts:focus {
     fill: var(--accent-color);
+    transition: fill var(--time-duration) var(--cubic-bezier), 
+    color var(--time-duration) var(--cubic-bezier);
 }
+
 
 .site-nav .item {
     margin-right: 50px;
@@ -377,6 +383,37 @@ nav.flex-container {
     margin-left: 30px;
     flex-basis: calc(100% / 3 - var(--card-set-gap));
 }
+
+.work-list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.text-on-photo{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--white-color);}
+
+.work-text{
+    position: absolute;
+    
+    width: 370px;
+    height: 70px;
+    background: rgba(47, 48, 58, 0.8);
+    bottom: 0%; }
 
 /* НАША КОМАНДА */
 .benefits-svg {
@@ -529,6 +566,9 @@ nav.flex-container {
     border: 1px solid var(--accent-color);
     border-radius: 4px;
 }
+.svg-clients{
+    transition: fill var(--time-duration) var(--cubic-bezier);
+}
 
 /*ПОРТФОЛІО*/
 /* ШАПКА ПРОФИЛЯ */
@@ -576,6 +616,9 @@ nav.flex-container {
     border: 4px solid transparent;
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
         0px 2px 2px rgba(0, 0, 0, 0.12);
+
+    transition: fill var(--time-duration) var(--cubic-bezier),
+    background-color var(--time-duration) var(--cubic-bezier);
 }
 
 /* БЛОК З РОБОТАМИ */
@@ -696,7 +739,7 @@ overflow: hidden;
 .contacts-footer .link:focus {
     color: var(--accent-color);
 
-    transition: fill var(--time-duration) var(--cubic-bezier),
+    transition: color var(--time-duration) var(--cubic-bezier),
     background-color var(--time-duration) var(--cubic-bezier);
 }
 
@@ -704,7 +747,7 @@ overflow: hidden;
 .contacts-footer .address:focus {
     color: var(--accent-color);
 
-    transition: fill var(--time-duration) var(--cubic-bezier),
+    transition: color var(--time-duration) var(--cubic-bezier),
     background-color var(--time-duration) var(--cubic-bezier);
 }
 
@@ -779,7 +822,7 @@ overflow: hidden;
     fill: var(--white-color);
     background-color: var(--accent-color);
 
-    transition: fill var(--time-duration) var(--cubic-bezier),
+    transition: color var(--time-duration) var(--cubic-bezier),
     background-color var(--time-duration) var(--cubic-bezier);
 }
 
@@ -791,6 +834,8 @@ overflow: hidden;
 .social-media {
     margin-top: 20px;
 }
+
+
 
 
 /* MODAL */
@@ -843,3 +888,7 @@ overflow: hidden;
     overflow: hidden;
 }
 
+
+.item-currents {
+    transition: fill var(--time-duration) var(--cubic-bezier);
+    }
