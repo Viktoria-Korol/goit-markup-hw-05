@@ -19,7 +19,7 @@ sans-serif; */
     --card-set-gap: 30px;
     --border-prtf-img: #EEEEEE;
     --svg-color: #AFB1B8;
-    --time-duration: 250ms;
+    --time-duration: 1000ms;
     --cubic-bezier: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -177,6 +177,7 @@ nav.flex-container {
     color: var(--basic-color);
     
     position: relative;
+    transition: color var(--time-duration) var(--cubic-bezier);
 }
 
 .current::after {
@@ -199,9 +200,6 @@ nav.flex-container {
     align-items: center;
 }
 
-.nav-link:hover{
-    transition: color var(--time-duration) var(--cubic-bezier);
-}
 
 /*КОНТАКТИ*/
 .contacts-header .link {
@@ -245,10 +243,12 @@ nav.flex-container {
 .nav-contacts:hover,
 .nav-contacts:focus {
     fill: var(--accent-color);
-    transition: fill var(--time-duration) var(--cubic-bezier), 
-    color var(--time-duration) var(--cubic-bezier);
 }
 
+.nav-contacts{
+    transition: color var(--time-duration) var(--cubic-bezier),
+    fill var(--time-duration) var(--cubic-bezier);
+}
 
 .site-nav .item {
     margin-right: 50px;
@@ -305,6 +305,9 @@ nav.flex-container {
     cursor: pointer;
     text-align: center;
 
+    transition: fill var(--time-duration) var(--cubic-bezier),
+    background-color var(--time-duration) var(--cubic-bezier);
+
 }
 
 .button-hero:hover,
@@ -312,9 +315,6 @@ nav.flex-container {
     background-color: #188CE8;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
-
-    transition: fill var(--time-duration) var(--cubic-bezier),
-    background-color var(--time-duration) var(--cubic-bezier);
 }
 
 
@@ -508,8 +508,6 @@ nav.flex-container {
 .social-link:focus {
     fill: var(--white-color);
     background-color: var(--accent-color);
-    transition: fill var(--time-duration) var(--cubic-bezier),
-    background-color var(--time-duration) var(--cubic-bezier);
 }
 
 .social-item.item:not(:last-child) {
@@ -529,6 +527,9 @@ nav.flex-container {
     border-radius: 50%;
     justify-content: center;
     align-items: center;
+    transition: fill var(--time-duration) var(--cubic-bezier),
+    background-color var(--time-duration) var(--cubic-bezier);
+
 }
 
 /*ПОСТІЙНІ КЛІЄНТИ*/
@@ -553,6 +554,8 @@ nav.flex-container {
     border: 1px solid var(--svg-color);
     border-radius: 4px;
     fill: var(--svg-color);
+    transition: fill var(--time-duration) var(--cubic-bezier),
+    border var(--time-duration) var(--cubic-bezier);
 }
 
 .clients {
@@ -567,12 +570,9 @@ nav.flex-container {
     border: 1px solid var(--accent-color);
     border-radius: 4px;
 }
-.svg-clients{
-    transition: fill var(--time-duration) var(--cubic-bezier);
-}
 
 /*ПОРТФОЛІО*/
-/* ШАПКА ПРОФИЛЯ */
+
 /* СПИСОК КНОПОК */
 .section-portfolio {
     justify-content: center;
@@ -598,7 +598,10 @@ nav.flex-container {
     color: var(--basic-color);
     cursor: pointer;
     background: #F5F4FA;
-    transition: var(--time-duration) var(--cubic-bezier);
+    transition: color var(--time-duration) var(--cubic-bezier),
+    background-color var(--time-duration) var(--cubic-bezier),
+    box-shadow var(--time-duration) var(--cubic-bezier);
+    
 }
 
 .portfolio-item {
@@ -635,7 +638,7 @@ nav.flex-container {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 .card{
-    transition: var(--time-duration) var(--cubic-bezier);
+   transition: box-shadow var(--time-duration) var(--cubic-bezier);
 }
 
 .card-set>.card-item {
@@ -661,6 +664,8 @@ overflow: hidden;
 .card-item:hover .card-details{
     transform: translateY(0);
 }
+
+
 .card-details{
     position: absolute;
     top: 0;
@@ -735,27 +740,25 @@ overflow: hidden;
     font-weight: 500;
     line-height: 1.14;
     text-decoration: none;
+    transition: color var(--time-duration) var(--cubic-bezier),
+    background-color var(--time-duration) var(--cubic-bezier);
 }
 
 .contacts-footer .link:hover,
 .contacts-footer .link:focus {
     color: var(--accent-color);
-
-    transition: color var(--time-duration) var(--cubic-bezier),
-    background-color var(--time-duration) var(--cubic-bezier);
 }
 
 .contacts-footer .address:hover,
 .contacts-footer .address:focus {
     color: var(--accent-color);
-
-    transition: color var(--time-duration) var(--cubic-bezier),
-    background-color var(--time-duration) var(--cubic-bezier);
 }
 
 .contacts-footer .address {
     color: var(--white-color);
     line-height: 1.7;
+    transition: color var(--time-duration) var(--cubic-bezier),
+    background-color var(--time-duration) var(--cubic-bezier);
 }
 
 .logo-footer {
@@ -775,7 +778,7 @@ overflow: hidden;
 .footer {
     background-color: var(--background-hero-and-footer);
     display: block;
-    padding: 60px 215px;
+    padding: 60px;
 }
 
 .footer-nav {
@@ -817,6 +820,9 @@ overflow: hidden;
     align-items: center;
     fill: var(--white-color);
     background: rgba(255, 255, 255, 0.1);
+
+    transition: fill var(--time-duration) var(--cubic-bezier),
+    background-color var(--time-duration) var(--cubic-bezier);
 }
 
 .social-footer-link:hover,
@@ -824,8 +830,6 @@ overflow: hidden;
     fill: var(--white-color);
     background-color: var(--accent-color);
 
-    transition: color var(--time-duration) var(--cubic-bezier),
-    background-color var(--time-duration) var(--cubic-bezier);
 }
 
 .footer-flex-wrapper {
@@ -848,7 +852,7 @@ overflow: hidden;
 
     width: 100%;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.2);
     transition: var(--time-duration) var(--cubic-bezier);
 }
 
@@ -877,7 +881,7 @@ overflow: hidden;
     height: 24px;
    cursor: pointer;
 
-    
+    padding: 6px 6px;
     background: var(--white-color);
     border-radius: 50%;
     border: 1px solid rgba(0, 0, 0, 0.1);
@@ -895,4 +899,9 @@ overflow: hidden;
 
 .item-currents {
     transition: fill var(--time-duration) var(--cubic-bezier);
+    }
+
+    .svg-transition{
+        
+        transition: fill var(--time-duration) var(--cubic-bezier);
     }
